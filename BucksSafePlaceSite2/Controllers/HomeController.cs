@@ -26,5 +26,17 @@ namespace BucksSafePlaceSite2.Controllers
 
             return View();
         }
+        public ActionResult FAQ()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+        public ActionResult Training()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }

@@ -13,10 +13,10 @@ namespace BucksSafePlaceSite2.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BucksSPDb3Entities : DbContext
+    public partial class BucksSPDb3Entities1 : DbContext
     {
-        public BucksSPDb3Entities()
-            : base("name=BucksSPDb3Entities")
+        public BucksSPDb3Entities1()
+            : base("name=BucksSPDb3Entities1")
         {
         }
     
@@ -26,7 +26,6 @@ namespace BucksSafePlaceSite2.Models
         }
     
         public virtual DbSet<Course> Courses { get; set; }
-        public virtual DbSet<Enrollment> Enrollments { get; set; }
-        public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<Incident> Incidents { get; set; }
     }
 }

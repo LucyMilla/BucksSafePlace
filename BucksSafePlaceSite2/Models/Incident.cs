@@ -12,14 +12,12 @@ namespace BucksSafePlaceSite2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Enrollment
+    public partial class Incident
     {
-        public int EnrollmentID { get; set; }
-        public Nullable<decimal> Grade { get; set; }
-        public int CourseID { get; set; }
-        public int StudentID { get; set; }
-    
-        public virtual Course Course { get; set; }
-        public virtual Student Student { get; set; }
+        public int IncidentID { get; set; }
+        public string Title { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string Report { get; set; }
     }
 }

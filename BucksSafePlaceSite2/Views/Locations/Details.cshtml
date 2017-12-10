@@ -1,17 +1,17 @@
 ﻿@model BucksSafePlaceSite2.Models.Location
-
+<h2 style="color:#fff">Break/New Line Cheat</h2>
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Details of Location";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title.</h2>
 
 <div>
-    <h4>Location</h4>
+    <h4></h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.BusinessName)
+            @Html.DisplayName("Buisness Name")
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.BusinessAddress)
+            @Html.DisplayName("Business Address")
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Postcode)
+            @Html.DisplayName("Postcode")
         </dt>
 
         <dd>
@@ -35,7 +35,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.TelephoneNumber)
+            @Html.DisplayName("Phone Number")
         </dt>
 
         <dd>

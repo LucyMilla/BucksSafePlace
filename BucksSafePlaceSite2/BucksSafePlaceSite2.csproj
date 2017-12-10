@@ -305,7 +305,6 @@
     <Content Include="Views\Incidents\Details.cshtml" />
     <Content Include="Views\Incidents\Edit.cshtml" />
     <Content Include="Views\Incidents\Index.cshtml" />
-    <Content Include="Views\Home\FAQ.cshtml" />
     <Content Include="Views\Home\Medical.cshtml" />
     <Content Include="Views\Locations\Create.cshtml" />
     <Content Include="Views\Locations\Delete.cshtml" />

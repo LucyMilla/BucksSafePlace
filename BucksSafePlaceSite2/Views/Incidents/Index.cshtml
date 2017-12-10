@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<BucksSafePlaceSite2.Models.Incident>
-
+<h2 style="color:#fff">Break/New Line Cheat</h2>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Incidents";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title.</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.IncidentTitle)
+            @Html.DisplayName("Incident Title")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Firstname)

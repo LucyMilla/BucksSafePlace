@@ -1,17 +1,17 @@
 ﻿@model BucksSafePlaceSite2.Models.Location
-
+<h2 style="color:#fff">Break/New Line Cheat</h2>
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Create a Location";
 }
 
-<h2>Create</h2>
+<h2>@ViewBag.Title.</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Location</h4>
+        <h4>Enter Details</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

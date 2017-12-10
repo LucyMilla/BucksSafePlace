@@ -10,107 +10,107 @@ using BucksSafePlaceSite2.Models;
 
 namespace BucksSafePlaceSite2.Controllers
 {
-    public class IncidentsController : Controller
+    public class LocationsController : Controller
     {
         private BucksSPDb3Entities4 db = new BucksSPDb3Entities4();
 
-        // GET: Incidents
+        // GET: Locations
         public ActionResult Index()
         {
-            return View(db.Incidents.ToList());
+            return View(db.Locations.ToList());
         }
 
-        // GET: Incidents/Details/5
+        // GET: Locations/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Incident incident = db.Incidents.Find(id);
-            if (incident == null)
+            Location location = db.Locations.Find(id);
+            if (location == null)
             {
                 return HttpNotFound();
             }
-            return View(incident);
+            return View(location);
         }
 
-        // GET: Incidents/Create
+        // GET: Locations/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Incidents/Create
+        // POST: Locations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IncidentID,Title,Firstname,Lastname,Report")] Incident incident)
+        public ActionResult Create([Bind(Include = "LocationID,BusinessName,BusinessAddress,Postcode,TelephoneNumber")] Location location)
         {
             if (ModelState.IsValid)
             {
-                db.Incidents.Add(incident);
+                db.Locations.Add(location);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(incident);
+            return View(location);
         }
 
-        // GET: Incidents/Edit/5
+        // GET: Locations/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Incident incident = db.Incidents.Find(id);
-            if (incident == null)
+            Location location = db.Locations.Find(id);
+            if (location == null)
             {
                 return HttpNotFound();
             }
-            return View(incident);
+            return View(location);
         }
 
-        // POST: Incidents/Edit/5
+        // POST: Locations/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IncidentID,Title,Firstname,Lastname,Report")] Incident incident)
+        public ActionResult Edit([Bind(Include = "LocationID,BusinessName,BusinessAddress,Postcode,TelephoneNumber")] Location location)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(incident).State = EntityState.Modified;
+                db.Entry(location).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(incident);
+            return View(location);
         }
 
-        // GET: Incidents/Delete/5
+        // GET: Locations/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Incident incident = db.Incidents.Find(id);
-            if (incident == null)
+            Location location = db.Locations.Find(id);
+            if (location == null)
             {
                 return HttpNotFound();
             }
-            return View(incident);
+            return View(location);
         }
 
-        // POST: Incidents/Delete/5
+        // POST: Locations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Incident incident = db.Incidents.Find(id);
-            db.Incidents.Remove(incident);
+            Location location = db.Locations.Find(id);
+            db.Locations.Remove(location);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

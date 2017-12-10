@@ -10,7 +10,7 @@
             <PropertyRef Name="IncidentID" />
           </Key>
           <Property Name="IncidentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="25" />
+          <Property Name="IncidentTitle" Type="nvarchar" MaxLength="25" />
           <Property Name="Firstname" Type="nvarchar" MaxLength="25" />
           <Property Name="Lastname" Type="nvarchar" MaxLength="25" />
           <Property Name="Report" Type="text" />
@@ -21,8 +21,8 @@
           </Key>
           <Property Name="LocationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BusinessName" Type="nvarchar" MaxLength="20" />
-          <Property Name="BusinessAddress" Type="nvarchar" MaxLength="50" />
-          <Property Name="Postcode" Type="nvarchar" MaxLength="7" />
+          <Property Name="BusinessAddress" Type="text" />
+          <Property Name="Postcode" Type="nvarchar" MaxLength="10" />
           <Property Name="TelephoneNumber" Type="int" />
         </EntityType>
         <EntityContainer Name="BucksSPDb3ModelStoreContainer">
@@ -39,7 +39,7 @@
             <PropertyRef Name="IncidentID" />
           </Key>
           <Property Name="IncidentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="IncidentTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="Firstname" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="Lastname" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="Report" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
@@ -50,11 +50,11 @@
           </Key>
           <Property Name="LocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="BusinessName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="BusinessAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Postcode" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="BusinessAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Postcode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="TelephoneNumber" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="BucksSPDb3Entities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BucksSPDb3Entities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Incidents" EntityType="Self.Incident" />
           <EntitySet Name="Locations" EntityType="Self.Location" />
         </EntityContainer>
@@ -63,12 +63,12 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BucksSPDb3ModelStoreContainer" CdmEntityContainer="BucksSPDb3Entities3">
+        <EntityContainerMapping StorageEntityContainer="BucksSPDb3ModelStoreContainer" CdmEntityContainer="BucksSPDb3Entities4">
           <EntitySetMapping Name="Incidents">
             <EntityTypeMapping TypeName="BucksSPDb3Model.Incident">
               <MappingFragment StoreEntitySet="Incidents">
                 <ScalarProperty Name="IncidentID" ColumnName="IncidentID" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="IncidentTitle" ColumnName="IncidentTitle" />
                 <ScalarProperty Name="Firstname" ColumnName="Firstname" />
                 <ScalarProperty Name="Lastname" ColumnName="Lastname" />
                 <ScalarProperty Name="Report" ColumnName="Report" />

@@ -5,14 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="BucksSPDb3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Course">
-          <Key>
-            <PropertyRef Name="CourseID" />
-          </Key>
-          <Property Name="CourseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Title" Type="nvarchar" MaxLength="50" />
-          <Property Name="Credits" Type="int" />
-        </EntityType>
         <EntityType Name="Incidents">
           <Key>
             <PropertyRef Name="IncidentID" />
@@ -23,23 +15,25 @@
           <Property Name="Lastname" Type="nvarchar" MaxLength="25" />
           <Property Name="Report" Type="text" />
         </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="LocationID" />
+          </Key>
+          <Property Name="LocationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BusinessName" Type="nvarchar" MaxLength="20" />
+          <Property Name="BusinessAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="Postcode" Type="nvarchar" MaxLength="7" />
+          <Property Name="TelephoneNumber" Type="int" />
+        </EntityType>
         <EntityContainer Name="BucksSPDb3ModelStoreContainer">
-          <EntitySet Name="Course" EntityType="Self.Course" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Incidents" EntityType="Self.Incidents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BucksSPDb3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Course">
-          <Key>
-            <PropertyRef Name="CourseID" />
-          </Key>
-          <Property Name="CourseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Credits" Type="Int32" />
-        </EntityType>
         <EntityType Name="Incident">
           <Key>
             <PropertyRef Name="IncidentID" />
@@ -50,25 +44,26 @@
           <Property Name="Lastname" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="Report" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="BucksSPDb3Entities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Courses" EntityType="Self.Course" />
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="LocationID" />
+          </Key>
+          <Property Name="LocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BusinessName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BusinessAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Postcode" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="TelephoneNumber" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="BucksSPDb3Entities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Incidents" EntityType="Self.Incident" />
+          <EntitySet Name="Locations" EntityType="Self.Location" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BucksSPDb3ModelStoreContainer" CdmEntityContainer="BucksSPDb3Entities1">
-          <EntitySetMapping Name="Courses">
-            <EntityTypeMapping TypeName="BucksSPDb3Model.Course">
-              <MappingFragment StoreEntitySet="Course">
-                <ScalarProperty Name="CourseID" ColumnName="CourseID" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Credits" ColumnName="Credits" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+        <EntityContainerMapping StorageEntityContainer="BucksSPDb3ModelStoreContainer" CdmEntityContainer="BucksSPDb3Entities3">
           <EntitySetMapping Name="Incidents">
             <EntityTypeMapping TypeName="BucksSPDb3Model.Incident">
               <MappingFragment StoreEntitySet="Incidents">
@@ -77,6 +72,17 @@
                 <ScalarProperty Name="Firstname" ColumnName="Firstname" />
                 <ScalarProperty Name="Lastname" ColumnName="Lastname" />
                 <ScalarProperty Name="Report" ColumnName="Report" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="BucksSPDb3Model.Location">
+              <MappingFragment StoreEntitySet="Location">
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="BusinessName" ColumnName="BusinessName" />
+                <ScalarProperty Name="BusinessAddress" ColumnName="BusinessAddress" />
+                <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+                <ScalarProperty Name="TelephoneNumber" ColumnName="TelephoneNumber" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

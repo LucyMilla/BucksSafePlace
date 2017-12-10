@@ -13,10 +13,10 @@ namespace BucksSafePlaceSite2.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BucksSPDb3Entities1 : DbContext
+    public partial class BucksSPDb3Entities3 : DbContext
     {
-        public BucksSPDb3Entities1()
-            : base("name=BucksSPDb3Entities1")
+        public BucksSPDb3Entities3()
+            : base("name=BucksSPDb3Entities3")
         {
         }
     
@@ -25,7 +25,7 @@ namespace BucksSafePlaceSite2.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Incident> Incidents { get; set; }
+        public virtual DbSet<Location> Locations { get; set; }
     }
 }

@@ -214,14 +214,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BucksSafePlaceModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Course.cs">
-      <DependentUpon>BucksSafePlaceModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Incident.cs">
       <DependentUpon>BucksSafePlaceModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IncidentsController.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Location.cs">
+      <DependentUpon>BucksSafePlaceModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

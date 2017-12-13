@@ -9438,3 +9438,7 @@ a.text-dark:focus, a.text-dark:hover {
     color: #fff;
 }
 
+.btn btn-danger active {
+    border-radius:50%;
+    border-color: white;
+}

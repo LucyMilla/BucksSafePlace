@@ -18,6 +18,6 @@ namespace BucksSafePlaceSite2.Models
         public string BusinessName { get; set; }
         public string BusinessAddress { get; set; }
         public string Postcode { get; set; }
-        public Nullable<int> TelephoneNumber { get; set; }
+        public string TelephoneNumber { get; set; }
     }
 }

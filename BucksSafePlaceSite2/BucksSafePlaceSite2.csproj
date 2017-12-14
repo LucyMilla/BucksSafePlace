@@ -215,10 +215,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BucksSafePlaceModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Incident.cs">
       <DependentUpon>BucksSafePlaceModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Location.cs">
       <DependentUpon>BucksSafePlaceModel.tt</DependentUpon>
     </Compile>

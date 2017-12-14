@@ -12,7 +12,7 @@ namespace BucksSafePlaceSite2.Controllers
 {
     public class IncidentsController : Controller
     {
-        private BucksSPDb3Entities4 db = new BucksSPDb3Entities4();
+        private BucksSPDb3Entities7 db = new BucksSPDb3Entities7();
 
         // GET: Incidents
         public ActionResult Index()
@@ -46,7 +46,7 @@ namespace BucksSafePlaceSite2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IncidentID,Title,Firstname,Lastname,Report")] Incident incident)
+        public ActionResult Create([Bind(Include = "IncidentID,IncidentTitle,Firstname,Lastname,Report")] Incident incident)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace BucksSafePlaceSite2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IncidentID,Title,Firstname,Lastname,Report")] Incident incident)
+        public ActionResult Edit([Bind(Include = "IncidentID,IncidentTitle,Firstname,Lastname,Report")] Incident incident)
         {
             if (ModelState.IsValid)
             {

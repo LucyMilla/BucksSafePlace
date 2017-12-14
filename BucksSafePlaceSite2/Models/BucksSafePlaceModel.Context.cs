@@ -13,10 +13,10 @@ namespace BucksSafePlaceSite2.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BucksSPDb3Entities4 : DbContext
+    public partial class BucksSPDb3Entities7 : DbContext
     {
-        public BucksSPDb3Entities4()
-            : base("name=BucksSPDb3Entities4")
+        public BucksSPDb3Entities7()
+            : base("name=BucksSPDb3Entities7")
         {
         }
     

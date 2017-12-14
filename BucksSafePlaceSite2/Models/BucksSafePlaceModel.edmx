@@ -23,7 +23,7 @@
           <Property Name="BusinessName" Type="nvarchar" MaxLength="20" />
           <Property Name="BusinessAddress" Type="text" />
           <Property Name="Postcode" Type="nvarchar" MaxLength="10" />
-          <Property Name="TelephoneNumber" Type="int" />
+          <Property Name="TelephoneNumber" Type="varchar" MaxLength="11" />
         </EntityType>
         <EntityContainer Name="BucksSPDb3ModelStoreContainer">
           <EntitySet Name="Incidents" EntityType="Self.Incidents" Schema="dbo" store:Type="Tables" />
@@ -52,9 +52,9 @@
           <Property Name="BusinessName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="BusinessAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Postcode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="TelephoneNumber" Type="Int32" />
+          <Property Name="TelephoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="BucksSPDb3Entities4" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BucksSPDb3Entities7" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Incidents" EntityType="Self.Incident" />
           <EntitySet Name="Locations" EntityType="Self.Location" />
         </EntityContainer>
@@ -63,7 +63,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BucksSPDb3ModelStoreContainer" CdmEntityContainer="BucksSPDb3Entities4">
+        <EntityContainerMapping StorageEntityContainer="BucksSPDb3ModelStoreContainer" CdmEntityContainer="BucksSPDb3Entities7">
           <EntitySetMapping Name="Incidents">
             <EntityTypeMapping TypeName="BucksSPDb3Model.Incident">
               <MappingFragment StoreEntitySet="Incidents">

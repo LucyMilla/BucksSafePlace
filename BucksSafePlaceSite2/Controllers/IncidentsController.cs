@@ -46,7 +46,7 @@ namespace BucksSafePlaceSite2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IncidentID,IncidentTitle,Firstname,Lastname,Report")] Incident incident)
+        public ActionResult Create([Bind(Include = "IncidentID,IncidentTitle,IncidentLocation,IncidentDate,Tag,Report")] Incident incident)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace BucksSafePlaceSite2.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IncidentID,IncidentTitle,Firstname,Lastname,Report")] Incident incident)
+        public ActionResult Edit([Bind(Include = "IncidentID,IncidentTitle,IncidentLocation,IncidentDate,Tag,Report")] Incident incident)
         {
             if (ModelState.IsValid)
             {

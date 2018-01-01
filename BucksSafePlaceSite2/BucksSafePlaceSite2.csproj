@@ -328,6 +328,8 @@
     <Content Include="Views\Locations\Edit.cshtml" />
     <Content Include="Views\Locations\Index.cshtml" />
     <Content Include="Views\Home\User.cshtml" />
+    <Content Include="Views\Home\Logged.cshtml" />
+    <Content Include="Views\Home\SystemTraining.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

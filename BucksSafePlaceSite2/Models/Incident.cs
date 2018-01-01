@@ -16,8 +16,9 @@ namespace BucksSafePlaceSite2.Models
     {
         public int IncidentID { get; set; }
         public string IncidentTitle { get; set; }
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
+        public string IncidentLocation { get; set; }
+        public Nullable<System.DateTime> IncidentDate { get; set; }
+        public string Tag { get; set; }
         public string Report { get; set; }
     }
 }

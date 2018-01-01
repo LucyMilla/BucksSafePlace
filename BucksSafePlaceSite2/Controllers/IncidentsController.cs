@@ -12,7 +12,7 @@ namespace BucksSafePlaceSite2.Controllers
 {
     public class IncidentsController : Controller
     {
-        private BucksSPDb3Entities7 db = new BucksSPDb3Entities7();
+        private BucksSPDb3Entities8 db = new BucksSPDb3Entities8();
 
         // GET: Incidents
         public ActionResult Index()

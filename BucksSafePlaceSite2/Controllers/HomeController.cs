@@ -38,7 +38,14 @@ namespace BucksSafePlaceSite2.Controllers
 
             return View();
         }
-       
+        public ActionResult Logged()
+        {
+            return View();
+        }
+       public ActionResult SystemTraining()
+        {
+            return View();
+        }
       
     }
 }

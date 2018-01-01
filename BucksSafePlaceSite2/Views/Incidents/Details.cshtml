@@ -18,20 +18,28 @@
 </dd>
 
 <dt>
-    @Html.DisplayName("Firstname")
+    @Html.DisplayName("Incident Location")
 </dt>
 
 <dd>
-    @Html.DisplayFor(model => model.Firstname)
+    @Html.DisplayFor(model => model.IncidentLocation)
 </dd>
 
 <dt>
-    @Html.DisplayName("Lastname")
+    @Html.DisplayName("Incident Date")
 </dt>
 
 <dd>
-    @Html.DisplayFor(model => model.Lastname)
+    @Html.DisplayFor(model => model.IncidentDate)
 </dd>
+
+        <dt>
+            @Html.DisplayName("Tag")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tag)
+        </dd>
 
 <dt>
     @Html.DisplayName("Report")
@@ -43,6 +51,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IncidentID }) |
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.IncidentID }) ---> No Editing by user only admin, higher authority*@
     @Html.ActionLink("Back to List", "Index")
 </p>

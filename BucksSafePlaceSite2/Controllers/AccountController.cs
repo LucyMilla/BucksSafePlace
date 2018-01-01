@@ -70,7 +70,7 @@ namespace BucksSafePlaceSite2.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View(model);
+                
             }
 
             // This doesn't count login failures towards account lockout
@@ -89,6 +89,7 @@ namespace BucksSafePlaceSite2.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
+            
         }
 
         //

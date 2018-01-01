@@ -11,8 +11,9 @@
           </Key>
           <Property Name="IncidentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IncidentTitle" Type="nvarchar" MaxLength="25" />
-          <Property Name="Firstname" Type="nvarchar" MaxLength="25" />
-          <Property Name="Lastname" Type="nvarchar" MaxLength="25" />
+          <Property Name="IncidentLocation" Type="nvarchar" MaxLength="25" />
+          <Property Name="IncidentDate" Type="datetime" />
+          <Property Name="Tag" Type="nvarchar" MaxLength="10" />
           <Property Name="Report" Type="text" />
         </EntityType>
         <EntityType Name="Location">
@@ -40,8 +41,9 @@
           </Key>
           <Property Name="IncidentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IncidentTitle" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="Firstname" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="Lastname" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="IncidentLocation" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="IncidentDate" Type="DateTime" Precision="3" />
+          <Property Name="Tag" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="Report" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Location">
@@ -54,7 +56,7 @@
           <Property Name="Postcode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="TelephoneNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="BucksSPDb3Entities7" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BucksSPDb3Entities8" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Incidents" EntityType="Self.Incident" />
           <EntitySet Name="Locations" EntityType="Self.Location" />
         </EntityContainer>
@@ -63,14 +65,15 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BucksSPDb3ModelStoreContainer" CdmEntityContainer="BucksSPDb3Entities7">
+        <EntityContainerMapping StorageEntityContainer="BucksSPDb3ModelStoreContainer" CdmEntityContainer="BucksSPDb3Entities8">
           <EntitySetMapping Name="Incidents">
             <EntityTypeMapping TypeName="BucksSPDb3Model.Incident">
               <MappingFragment StoreEntitySet="Incidents">
                 <ScalarProperty Name="IncidentID" ColumnName="IncidentID" />
                 <ScalarProperty Name="IncidentTitle" ColumnName="IncidentTitle" />
-                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
-                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="IncidentLocation" ColumnName="IncidentLocation" />
+                <ScalarProperty Name="IncidentDate" ColumnName="IncidentDate" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
                 <ScalarProperty Name="Report" ColumnName="Report" />
               </MappingFragment>
             </EntityTypeMapping>

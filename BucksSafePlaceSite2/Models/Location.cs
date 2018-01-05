@@ -12,12 +12,16 @@ namespace BucksSafePlaceSite2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Location
+    public class Location
     {
         public int LocationID { get; set; }
+        [System.ComponentModel.DataAnnotations.Required]
         public string BusinessName { get; set; }
+        [System.ComponentModel.DataAnnotations.Required]
         public string BusinessAddress { get; set; }
+        [System.ComponentModel.DataAnnotations.Required]
         public string Postcode { get; set; }
+        [System.ComponentModel.DataAnnotations.Required]
         public string TelephoneNumber { get; set; }
     }
 }

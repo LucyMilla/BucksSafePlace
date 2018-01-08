@@ -8,13 +8,13 @@ namespace BucksSafePlaceSite2.Controllers
 {
     public class HomeController : Controller
     {
-        [Authorize(Roles = "User")]
+       
         public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize(Roles="User")]
+        
         public ActionResult About()
         {
             
@@ -28,12 +28,7 @@ namespace BucksSafePlaceSite2.Controllers
 
             return View();
         }
-        public ActionResult FAQ()
-        {
-           
-
-            return View();
-        }
+        
         [Authorize(Roles = "Admin")]
         public ActionResult Medical()
         {
@@ -41,15 +36,22 @@ namespace BucksSafePlaceSite2.Controllers
 
             return View();
         }
-        public ActionResult Logged()
-        {
-            return View();
-        }
-        [Authorize(Roles = "User")] 
+
+        [Authorize(Roles = "Admin")]
         public ActionResult SystemTraining()
         {
             return View();
         }
-      
+        [Authorize(Roles = "Admin")]
+        public ActionResult Roles()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "Admin")]
+        public ActionResult Incidents()
+        {
+            return View();
+        }
     }
 }

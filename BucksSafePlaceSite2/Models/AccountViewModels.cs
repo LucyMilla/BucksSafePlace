@@ -60,6 +60,7 @@ namespace BucksSafePlaceSite2.Models
 
         [Display(Name = "Remember me?")]
         public bool RememberMe { get; set; }
+        public object UserName { get; internal set; }
     }
 
     public class RegisterViewModel

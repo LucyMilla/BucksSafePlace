@@ -86,6 +86,11 @@ namespace BucksSafePlaceSite2
             }
             return manager;
         }
+
+        internal Task FindAsync(object userName, string password)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     // Configure the application sign-in manager which is used in this application.

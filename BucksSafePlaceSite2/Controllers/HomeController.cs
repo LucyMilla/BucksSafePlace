@@ -8,11 +8,13 @@ namespace BucksSafePlaceSite2.Controllers
 {
     public class HomeController : Controller
     {
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             return View();
         }
 
+        [Authorize(Roles="Admin")]
         public ActionResult About()
         {
             
@@ -42,7 +44,8 @@ namespace BucksSafePlaceSite2.Controllers
         {
             return View();
         }
-       public ActionResult SystemTraining()
+        [Authorize(Roles = "Admin")] 
+        public ActionResult SystemTraining()
         {
             return View();
         }

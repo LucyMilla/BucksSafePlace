@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace BucksSafePlaceSite2.Controllers
 {
+    [Authorize]
     public class RoleController : Controller
     {
 

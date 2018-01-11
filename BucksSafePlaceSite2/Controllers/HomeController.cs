@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace BucksSafePlaceSite2.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
        
@@ -50,6 +51,11 @@ namespace BucksSafePlaceSite2.Controllers
 
         [Authorize(Roles = "Admin")]
         public ActionResult Incidents()
+        {
+            return View();
+        }
+        [Authorize(Roles = "Admin")]
+        public ActionResult Locations()
         {
             return View();
         }

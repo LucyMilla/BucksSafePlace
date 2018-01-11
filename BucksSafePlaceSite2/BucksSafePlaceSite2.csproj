@@ -302,13 +302,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Incidents\Create.cshtml" />
-    <Content Include="Views\Incidents\Delete.cshtml" />
     <Content Include="Views\Incidents\Details.cshtml" />
     <Content Include="Views\Incidents\Edit.cshtml" />
     <Content Include="Views\Incidents\Index.cshtml" />
     <Content Include="Views\Home\Medical.cshtml" />
     <Content Include="Views\Locations\Create.cshtml" />
-    <Content Include="Views\Locations\Delete.cshtml" />
     <Content Include="Views\Locations\Details.cshtml" />
     <Content Include="Views\Locations\Edit.cshtml" />
     <Content Include="Views\Locations\Index.cshtml" />

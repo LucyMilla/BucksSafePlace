@@ -18,6 +18,7 @@ namespace BucksSafePlaceSite2.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
         private ApplicationDbContext Context;
+     
 
         public AccountController()
         {
@@ -29,6 +30,8 @@ namespace BucksSafePlaceSite2.Controllers
             UserManager = userManager;
             SignInManager = signInManager;
         }
+
+
 
         public ApplicationSignInManager SignInManager
         {

@@ -24,25 +24,25 @@ namespace BucksSafePlaceSite2.Controllers
         {          
             return View();
         }
-              
+
         public ActionResult Medical()
         {
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public ActionResult SystemTraining()
         {
             return View();
         }       
 
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public ActionResult Incidents()
         {
             return View();
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public ActionResult Locations()
         {
             return View();

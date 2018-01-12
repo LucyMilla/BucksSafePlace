@@ -10,7 +10,7 @@ using BucksSafePlaceSite2.Models;
 
 namespace BucksSafePlaceSite2.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize]
     public class LocationsController : Controller
     {
         private BucksSPDb3Entities8 db = new BucksSPDb3Entities8();

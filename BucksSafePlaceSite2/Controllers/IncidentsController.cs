@@ -16,9 +16,26 @@ namespace BucksSafePlaceSite2.Controllers
         private BucksSPDb3Entities8 db = new BucksSPDb3Entities8();
 
         // GET: Incidents
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string searchString)
         {
-            return View(db.Incidents.ToList());
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "tag_desc" : "";
+            var tag = from t in db.Incidents
+                      select t;
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                tag = tag.Where(t => t.Tag.Contains(searchString));
+                         
+            }
+            switch (sortOrder)
+            {
+                case "tag_desc":
+                    tag = tag.OrderByDescending(t => t.Tag);
+                    break;
+         
+
+     
+            }
+            return View(tag.ToList());
         }
 
         // GET: Incidents/Details/5

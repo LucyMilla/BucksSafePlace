@@ -9,6 +9,13 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@using (Html.BeginForm())
+{
+    <p>
+        Find by Tag: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" />
+    </p>
+}
 <table class="table">
     <tr>
         <th>
@@ -21,7 +28,8 @@
             @Html.DisplayName("Incident Date")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Tag)
+            @Html.ActionLink("Tag", "Index", new { sortOrder =ViewBag.NameSortParm}, new { @style = "color:#000;" })
+           
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Report)
@@ -47,8 +55,8 @@
             @Html.DisplayFor(modelItem => item.Report)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IncidentID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IncidentID }) 
+            @Html.ActionLink("Edit", "Edit", new { id=item.IncidentID }, new { @style = "color:#000;" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IncidentID }, new { @style = "color:#000;" }) 
            
         </td>
     </tr>
